@@ -48,11 +48,10 @@
 }
 
 .sectionImage {
-  flex: 1;
   width: 100%;
-  max-width: 800px;
+  max-width: 500px;
   border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   filter: brightness(90%);
   height: auto;
 }
