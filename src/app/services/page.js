@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 const grandDriveServices = [
   {
     name: "Haircut",
-    price: "£15",
+    price: "£16",
     description: "A classic haircut tailored to your style.",
   },
   {
@@ -42,7 +42,7 @@ const grandDriveServices = [
   },
   {
     name: "Skinfade",
-    price: "£18",
+    price: "£19",
     description: "Sharp and modern skin fade style.",
   },
   {
