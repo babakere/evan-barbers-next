@@ -1,4 +1,6 @@
-/* Hero */
+/* =====================
+   Hero
+   ===================== */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -9,19 +11,21 @@
   text-align: center;
   color: white;
   overflow: hidden;
-  background: url("/evanbarbers/supra.webp") center 9% / cover no-repeat;
+}
+
+.heroBg {
+  object-fit: cover;
+  object-position: center 9%;
+  z-index: 0;
 }
 
 .heroOverlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.8)
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.75)
   );
   z-index: 1;
 }
@@ -29,85 +33,148 @@
 .heroContent {
   position: relative;
   z-index: 2;
-  padding: 20px;
-  max-width: 900px;
+  padding: 20px 16px;
+  max-width: 860px;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: var(--navbar-height, 60px);
 }
 
 .heroTitle {
-  font-family: "Bebas Neue", "Montserrat", sans-serif;
-  font-size: 4rem;
+  font-family: var(--font-bebas, "Bebas Neue"), "Montserrat", sans-serif;
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  line-height: 1.1;
+  letter-spacing: 1px;
 }
 
 .heroSubtitle {
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   font-weight: 300;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
 .heroLogo {
-  margin: 16px auto;
+  margin: 12px auto 20px;
   display: block;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+/* Hero CTA buttons */
+.heroCtas {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.ctaPrimary {
+  display: inline-block;
+  background-color: var(--color-red, #d32f2f);
+  color: white;
+  padding: 13px 28px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ctaPrimary:hover {
+  background-color: var(--color-red-dark, #b71c1c);
+  transform: translateY(-1px);
+}
+
+.ctaSecondary {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 13px 28px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  transition: background-color 0.2s, transform 0.2s;
+  backdrop-filter: blur(4px);
+}
+
+.ctaSecondary:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
 }
 
 /* Locations Box */
 .locationsBox {
-  margin-top: 32px;
-  padding: 24px;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  margin-top: 8px;
+  padding: 20px 24px;
+  background-color: rgba(255, 255, 255, 0.93);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
   color: black;
+  text-align: left;
 }
 
 .locationsTitle {
-  font-family: "Bebas Neue", "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-family: var(--font-bebas, "Bebas Neue"), "Montserrat", sans-serif;
+  font-size: 1.6rem;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
 .locationsGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 20px;
 }
 
 .locationCard {
-  text-align: left;
-  padding: 16px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.03);
 }
 
 .locationCard p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin: 4px 0;
   color: #333;
+  line-height: 1.5;
 }
 
 .locationName {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 8px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  color: var(--color-red, #d32f2f);
 }
 
 .hoursBlock {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   margin-top: 8px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #222;
 }
 
-/* About Section */
+/* =====================
+   About Section
+   ===================== */
 .aboutSection {
-  padding: 48px 24px;
+  padding: 72px 24px;
 }
 
 .aboutContent {
@@ -115,7 +182,7 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 48px;
 }
 
 .aboutText {
@@ -123,34 +190,37 @@
 }
 
 .aboutText h2 {
-  font-family: "Bebas Neue", "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-family: var(--font-bebas, "Bebas Neue"), "Montserrat", sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 16px;
+  letter-spacing: 0.5px;
 }
 
 .aboutText p {
   font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 24px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 28px;
 }
 
 .ctaButton {
   display: inline-block;
-  background-color: #d32f2f;
+  background-color: var(--color-red, #d32f2f);
   color: white;
-  padding: 12px 32px;
+  padding: 13px 32px;
   border-radius: 25px;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
-  transition: background-color 0.2s;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .ctaButton:hover {
-  background-color: #b71c1c;
+  background-color: var(--color-red-dark, #b71c1c);
+  transform: translateY(-1px);
 }
 
 .aboutImage {
@@ -160,26 +230,77 @@
 }
 
 .roundedImage {
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
   width: 100%;
   height: auto;
-  max-width: 500px;
+  max-width: 480px;
 }
 
-/* Testimonials */
+/* =====================
+   Gallery Section
+   ===================== */
+.gallerySection {
+  padding: 72px 24px;
+  background-color: var(--color-bg-light, #f9f9f9);
+  text-align: center;
+}
+
+.gallerySection h2 {
+  font-family: var(--font-bebas, "Bebas Neue"), "Montserrat", sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.gallerySubtitle {
+  color: var(--color-muted, #555);
+  font-size: 0.95rem;
+  margin-bottom: 36px;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 960px;
+  margin: 0 auto 36px;
+}
+
+.galleryItem {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.galleryImg {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.galleryItem:hover .galleryImg {
+  transform: scale(1.05);
+}
+
+/* =====================
+   Testimonials
+   ===================== */
 .testimonials {
-  padding: 48px 24px;
-  background-color: #fafafa;
+  padding: 72px 24px;
   text-align: center;
 }
 
 .testimonials h2 {
-  font-family: "Bebas Neue", "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-family: var(--font-bebas, "Bebas Neue"), "Montserrat", sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
 }
 
 .testimonialGrid {
@@ -192,68 +313,213 @@
 
 .testimonialCard {
   background: white;
-  padding: 32px;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 32px 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  text-align: left;
+}
+
+.testimonialQuote {
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  color: var(--color-red, #d32f2f);
+  line-height: 1;
+  margin-bottom: 8px;
+  opacity: 0.7;
 }
 
 .testimonialText {
   font-style: italic;
   margin-bottom: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
+  color: #444;
+  font-size: 0.95rem;
 }
 
 .testimonialName {
   font-weight: 700;
+  font-size: 0.9rem;
+  color: #222;
 }
 
-/* Map */
-.mapSection {
-  padding: 48px 24px;
+/* =====================
+   Find Us
+   ===================== */
+.findUsSection {
+  padding: 72px 24px;
   text-align: center;
+  background-color: var(--color-bg-light, #f9f9f9);
 }
 
-.mapSection h2 {
-  font-family: "Bebas Neue", "Montserrat", sans-serif;
-  font-size: 2rem;
+.findUsSection h2 {
+  font-family: var(--font-bebas, "Bebas Neue"), "Montserrat", sans-serif;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
-.mapContainer {
-  width: 100%;
-  max-width: 800px;
-  height: 500px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+.findUsSubtitle {
+  color: var(--color-muted, #555);
+  font-size: 0.9rem;
+  margin-bottom: 40px;
+}
+
+.findUsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 760px;
   margin: 0 auto;
 }
 
-/* Mobile */
+.findUsCard {
+  background: white;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.findUsName {
+  font-family: var(--font-bebas, "Bebas Neue"), "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-red, #d32f2f);
+  letter-spacing: 0.3px;
+}
+
+.findUsAddress {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #333;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.findUsAddress:hover {
+  color: var(--color-red, #d32f2f);
+}
+
+.findUsAddress svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.findUsHours {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: #555;
+}
+
+.findUsHours svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #888;
+}
+
+.findUsHours p {
+  margin: 2px 0;
+  line-height: 1.5;
+}
+
+.directionsBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-red, #d32f2f);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  transition: background-color 0.2s, transform 0.2s;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+.directionsBtn:hover {
+  background-color: var(--color-red-dark, #b71c1c);
+  transform: translateY(-1px);
+}
+
+/* =====================
+   Mobile
+   ===================== */
 @media (max-width: 768px) {
-  .heroTitle {
-    font-size: 2.5rem;
-  }
-
-  .heroSubtitle {
-    font-size: 1.2rem;
-  }
-
   .locationsGrid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .aboutContent {
     flex-direction: column;
+    gap: 28px;
+  }
+
+  .aboutImage {
+    order: -1;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
   }
 
   .testimonialGrid {
     grid-template-columns: 1fr;
   }
 
-  .mapContainer {
-    height: 300px;
+  .findUsGrid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContent {
+    padding: 16px 12px;
+  }
+
+  .locationsBox {
+    padding: 16px;
+  }
+
+  .heroCtas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .findUsGrid {
+    gap: 16px;
+  }
+
+  .findUsCard {
+    padding: 22px 18px;
   }
 }

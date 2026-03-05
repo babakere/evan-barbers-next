@@ -1,14 +1,32 @@
+:root {
+  --color-red: #d32f2f;
+  --color-red-dark: #b71c1c;
+  --color-dark: #1a1a1a;
+  --color-text: #333;
+  --color-muted: #555;
+  --color-bg-light: #f9f9f9;
+  --navbar-height: 60px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 html,
 body {
-  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-montserrat, "Montserrat"), "Helvetica Neue", Arial,
+    sans-serif;
   color: #000;
   background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -19,4 +37,29 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Accessibility: visible focus ring */
+:focus-visible {
+  outline: 3px solid var(--color-red);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Skip-to-content link for keyboard/screen reader users */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--color-red);
+  color: white;
+  padding: 12px 24px;
+  z-index: 9999;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
 }

@@ -51,11 +51,17 @@ export default function Contact() {
           <h2>Grand Drive</h2>
           <p>
             <MapPin size={16} />
-            <strong>Address:</strong> {grandDrive.address}
+            <strong>Address:</strong>{" "}
+            <a href={grandDrive.mapLink} target="_blank" rel="noopener noreferrer" className={styles.addressLink}>
+              {grandDrive.address}
+            </a>
           </p>
           <p>
             <Phone size={16} />
-            <strong>Phone:</strong> {grandDrive.phone}
+            <strong>Phone:</strong>{" "}
+            <a href={`tel:${grandDrive.phone.replace(/\s/g, "")}`} className={styles.addressLink}>
+              {grandDrive.phone}
+            </a>
           </p>
           <div className={styles.hours}>
             <Clock size={16} />
@@ -70,11 +76,17 @@ export default function Contact() {
           <h2>Wimbledon</h2>
           <p>
             <MapPin size={16} />
-            <strong>Address:</strong> {wimbledon.address}
+            <strong>Address:</strong>{" "}
+            <a href={wimbledon.mapLink} target="_blank" rel="noopener noreferrer" className={styles.addressLink}>
+              {wimbledon.address}
+            </a>
           </p>
           <p>
             <Phone size={16} />
-            <strong>Phone:</strong> {wimbledon.phone}
+            <strong>Phone:</strong>{" "}
+            <a href={`tel:${wimbledon.phone.replace(/\s/g, "")}`} className={styles.addressLink}>
+              {wimbledon.phone}
+            </a>
           </p>
           <div className={styles.hours}>
             <Clock size={16} />

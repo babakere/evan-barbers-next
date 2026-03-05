@@ -1,9 +1,9 @@
 .footer {
-  background-color: #1a1a1a;
+  background-color: var(--color-dark, #1a1a1a);
   color: #ccc;
-  padding: 48px 24px 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.85rem;
+  padding: 36px 24px 0;
+  font-family: var(--font-montserrat, "Montserrat"), sans-serif;
+  font-size: 0.82rem;
 }
 
 .container {
@@ -11,32 +11,36 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 40px;
+  gap: 32px;
 }
 
 .column h3 {
   color: white;
-  font-size: 1.3rem;
-  margin-bottom: 4px;
+  font-size: 1.2rem;
+  margin-bottom: 2px;
 }
 
 .column h4 {
   color: white;
-  font-size: 1rem;
-  margin-bottom: 12px;
+  font-size: 0.82rem;
+  margin-bottom: 10px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .brand {
-  font-family: "Bebas Neue", "Montserrat", sans-serif;
-  font-size: 1.5rem;
+  font-family: var(--font-bebas, "Bebas Neue"), "Montserrat", sans-serif;
+  font-size: 1.4rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .tagline {
-  color: #999;
-  margin-bottom: 16px;
+  color: #777;
+  margin-bottom: 14px;
   font-style: italic;
+  font-size: 0.78rem;
 }
 
 .footerNav {
@@ -47,105 +51,135 @@
 }
 
 .footerNav a {
-  color: #ccc;
+  color: #aaa;
   transition: color 0.2s;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 }
 
 .footerNav a:hover {
-  color: #d32f2f;
+  color: white;
 }
 
 .socials {
   display: flex;
-  gap: 16px;
+  gap: 14px;
 }
 
 .socials a {
-  color: #ccc;
-  transition: color 0.2s;
+  color: #aaa;
+  transition: color 0.2s, transform 0.2s;
+  line-height: 0;
 }
 
 .socials a:hover {
-  color: #d32f2f;
+  color: white;
+  transform: scale(1.15);
 }
 
 .column p {
   display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 6px 0;
-  line-height: 1.4;
+  align-items: flex-start;
+  gap: 7px;
+  margin: 5px 0;
+  line-height: 1.5;
+  color: #aaa;
+  font-size: 0.78rem;
+}
+
+.column p svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.addressLink {
+  color: #aaa;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.addressLink:hover {
+  color: white;
 }
 
 .hours {
   display: flex;
-  gap: 8px;
-  margin-top: 8px;
+  gap: 7px;
+  margin-top: 6px;
+  align-items: flex-start;
+}
+
+.hours svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #aaa;
 }
 
 .hours p {
-  margin: 2px 0;
+  margin: 1px 0;
+  font-size: 0.78rem;
 }
 
 .bottom {
-  margin-top: 40px;
-  padding: 20px 0;
-  border-top: 1px solid #333;
+  margin-top: 28px;
+  padding: 14px 0;
+  border-top: 1px solid #2a2a2a;
   text-align: center;
-  color: #666;
-  font-size: 0.8rem;
+  color: #444;
+  font-size: 0.74rem;
 }
 
+/* =====================
+   Mobile: slim single bar
+   Hide the location detail columns — that info lives on /contact
+   ===================== */
 @media (max-width: 768px) {
+  .footer {
+    padding: 24px 20px 0;
+  }
+
   .container {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Hide the two location columns on mobile */
+  .locationColumn {
+    display: none;
+  }
+
+  /* Brand column takes full width, horizontal layout */
+  .brandColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
-  .footer {
-    padding: 32px 20px 0;
-  }
 
-  .column p {
-    justify-content: center;
-    font-size: 0.8rem;
-  }
-
-  .column h4 {
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-  }
-
-  .hours {
-    justify-content: center;
-  }
-
-  .hours p {
-    font-size: 0.8rem;
+  .tagline {
+    margin-bottom: 10px;
   }
 
   .footerNav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
-    margin-bottom: 12px;
+    gap: 4px 16px;
+    margin-bottom: 14px;
+  }
+
+  .footerNav a {
+    font-size: 0.8rem;
   }
 
   .socials {
     justify-content: center;
-    margin-bottom: 8px;
+    gap: 18px;
   }
-  .tagline {
-    margin-bottom: 12px;
-    font-size: 0.8rem;
-  }
-  .brand {
-    font-size: 1.2rem;
-  }
+
   .bottom {
-    margin-top: 24px;
-    padding: 16px 0;
+    margin-top: 20px;
+    padding: 12px 0;
   }
 }

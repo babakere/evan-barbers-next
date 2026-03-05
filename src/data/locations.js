@@ -3,6 +3,7 @@ export const locations = {
     name: "Grand Drive",
     address: "358 Grand Drive, SW20 9NQ, London",
     phone: "+44 7928 186951",
+    mapLink: "https://maps.google.com/?q=Evan+Barbers,+358+Grand+Drive,+SW20+9NQ,+London",
     mapEmbed:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2489.6044565022166!2d-0.2252890230223906!3d51.39194737178735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487608f9d74afb23%3A0xc5dc96046b1bed73!2sEvan%20Barbers!5e0!3m2!1sen!2suk!4v1733606843716!5m2!1sen!2suk",
     hours: {
@@ -20,6 +21,7 @@ export const locations = {
     name: "Wimbledon",
     address: "95 The Broadway, SW19 1QG, London",
     phone: "+44 7928 186951",
+    mapLink: "https://maps.google.com/?q=Evan+Barbers,+95+The+Broadway,+SW19+1QG,+London",
     mapEmbed:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.1129657419215!2d-0.20414962338520065!3d51.419351471793426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487608ba8e7e4c4f%3A0x178ec97031c70f9b!2sEvan%20Barbers!5e0!3m2!1sen!2suk!4v1733790264851!5m2!1sen!2suk",
     hours: {
