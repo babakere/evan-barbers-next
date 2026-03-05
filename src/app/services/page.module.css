@@ -1,0 +1,135 @@
+.page {
+  margin-top: 60px;
+  padding: 50px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #f9f9f9, #f1f1f1);
+}
+
+.pageTitle {
+  font-family: "Bebas Neue", "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 32px;
+}
+
+.cardsContainer {
+  display: flex;
+  gap: 40px;
+  max-width: 950px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  flex: 1;
+  padding: 48px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  min-width: 320px;
+}
+
+.branchName {
+  font-family: "Bebas Neue", "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Status */
+.statusOpen {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  padding: 4px 10px;
+  border-radius: 15px;
+  color: white;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin: 8px auto 16px;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+}
+
+.statusClosed {
+  text-align: center;
+  margin: 8px 0 16px;
+}
+
+.closedText {
+  display: block;
+  color: #d32f2f;
+  font-weight: 700;
+}
+
+.nextOpen {
+  display: block;
+  color: #333;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+/* Service items */
+.serviceItem {
+  padding: 10px 0;
+}
+
+.serviceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.serviceName {
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.servicePrice {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.serviceDesc {
+  font-size: 0.8rem;
+  color: #333;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+.tagline {
+  text-align: center;
+  margin-top: 40px;
+  font-style: italic;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cardsContainer {
+    flex-direction: column;
+  }
+
+  .card {
+    min-width: unset;
+    padding: 32px;
+  }
+}
