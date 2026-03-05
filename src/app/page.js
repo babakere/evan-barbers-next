@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MapPin, Clock } from "lucide-react";
 import { locations } from "@/data/locations";
 import styles from "./page.module.css";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
   title: "Home | Evan Barbers - Finest Cuts Since 2009",
@@ -128,10 +129,12 @@ export default function Home() {
               text: "Friendly staff and top-notch service. Highly recommended!",
             },
           ].map((t, i) => (
-            <div key={i} className={styles.testimonialCard}>
-              <p className={styles.testimonialText}>"{t.text}"</p>
-              <p className={styles.testimonialName}>- {t.name}</p>
-            </div>
+            <ScrollReveal key={i} delay={i * 150}>
+              <div className={styles.testimonialCard}>
+                <p className={styles.testimonialText}>"{t.text}"</p>
+                <p className={styles.testimonialName}>- {t.name}</p>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>

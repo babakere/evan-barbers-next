@@ -6,7 +6,7 @@
 
 .pageTitle {
   font-family: "Bebas Neue", "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
@@ -50,10 +50,11 @@
 .sectionImage {
   width: 100%;
   max-width: 500px;
+  height: 350px;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   filter: brightness(90%);
-  height: auto;
 }
 
 .amenityIcons {
@@ -148,10 +149,18 @@
   background-color: #b71c1c;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .section,
   .sectionReverse {
     flex-direction: column;
+  }
+
+  .sectionImage {
+    height: 250px;
+    max-width: 100%;
+  }
+
+  .pageTitle {
+    font-size: 2rem;
   }
 }
