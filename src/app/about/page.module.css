@@ -1,0 +1,158 @@
+.page {
+  margin-top: 60px;
+  padding: 50px 24px;
+  background-color: #f9f9f9;
+}
+
+.pageTitle {
+  font-family: "Bebas Neue", "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+/* Alternating sections */
+.section,
+.sectionReverse {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto 48px;
+}
+
+.sectionReverse {
+  flex-direction: row-reverse;
+}
+
+.textBlock {
+  flex: 1;
+  text-align: center;
+  padding: 16px;
+}
+
+.textBlock h2 {
+  font-family: "Bebas Neue", "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.textBlock p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.sectionImage {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  filter: brightness(90%);
+  height: auto;
+}
+
+.amenityIcons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* Reviews */
+.reviewsSection {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.reviewsSection h2 {
+  font-family: "Bebas Neue", "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.reviewGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.reviewCard {
+  background: white;
+  padding: 24px;
+  width: 300px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.reviewText {
+  font-style: italic;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.reviewName {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+/* CTA */
+.ctaSection {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaSection h2 {
+  font-family: "Bebas Neue", "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.ctaSection p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: #d32f2f;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.ctaButton:hover {
+  background-color: #b71c1c;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section,
+  .sectionReverse {
+    flex-direction: column;
+  }
+}
