@@ -19,7 +19,7 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://www.evanbarbers.org"),
+  metadataBase: new URL("https://www.evanbarbers.co.uk"),
   title: "Evan Barbers | Your Trusted Grooming Destination",
   description:
     "Evan Barbers offers premium men's grooming services since 2009. Walk-ins welcome at our Grand Drive and Wimbledon locations in London.",
@@ -29,7 +29,7 @@ export const metadata = {
     title: "Evan Barbers | Your Trusted Grooming Destination",
     description:
       "Evan Barbers offers premium men's grooming services since 2009.",
-    url: "https://www.evanbarbers.org",
+    url: "https://www.evanbarbers.co.uk",
     siteName: "Evan Barbers",
     images: [{ url: "/evanbarbers/logo.webp", width: 800, height: 800 }],
     type: "website",
@@ -52,12 +52,12 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "BarberShop",
-      "@id": "https://www.evanbarbers.org/#granddrive",
+      "@id": "https://www.evanbarbers.co.uk/#granddrive",
       name: "Evan Barbers - Grand Drive",
       description: "Premium men's grooming services since 2009",
-      url: "https://www.evanbarbers.org",
+      url: "https://www.evanbarbers.co.uk",
       telephone: "+447928186951",
-      image: "https://www.evanbarbers.org/evanbarbers/logo.webp",
+      image: "https://www.evanbarbers.co.uk/evanbarbers/logo.webp",
       address: {
         "@type": "PostalAddress",
         streetAddress: "358 Grand Drive",
@@ -88,12 +88,12 @@ const jsonLd = {
     },
     {
       "@type": "BarberShop",
-      "@id": "https://www.evanbarbers.org/#wimbledon",
+      "@id": "https://www.evanbarbers.co.uk/#wimbledon",
       name: "Evan Barbers - Wimbledon",
       description: "Premium men's grooming services since 2009",
-      url: "https://www.evanbarbers.org",
+      url: "https://www.evanbarbers.co.uk",
       telephone: "+447928186951",
-      image: "https://www.evanbarbers.org/evanbarbers/logo.webp",
+      image: "https://www.evanbarbers.co.uk/evanbarbers/logo.webp",
       address: {
         "@type": "PostalAddress",
         streetAddress: "95 The Broadway",

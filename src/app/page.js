@@ -13,7 +13,7 @@ export const metadata = {
     title: "Evan Barbers | Finest Cuts Since 2009",
     description:
       "Experience top-notch grooming services and stylish haircuts at Evan Barbers.",
-    url: "https://www.evanbarbers.org/",
+    url: "https://www.evanbarbers.co.uk/",
     images: [{ url: "/evanbarbers/logo.webp" }],
     type: "website",
   },

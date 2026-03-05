@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.evanbarbers.org/sitemap.xml",
+    sitemap: "https://www.evanbarbers.co.uk/sitemap.xml",
   };
 }
