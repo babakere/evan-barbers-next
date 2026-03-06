@@ -21,7 +21,7 @@ const bebasNeue = Bebas_Neue({
 export const metadata = {
   metadataBase: new URL("https://www.evanbarbers.co.uk"),
   verification: {
-    google: "QE7iDrD1ACT558b7qNivL-wO75q2hFVuWosSgiUiM7E",
+    google: "mawZf_IrG13FzkERTYRN9ie0Qbu6b0jm1rbYJdSC01E",
   },
   title: "Evan Barbers | Your Trusted Grooming Destination",
   description:
