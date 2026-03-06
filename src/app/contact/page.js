@@ -10,7 +10,7 @@ export const metadata = {
     title: "Contact Evan Barbers",
     description:
       "Reach out to Evan Barbers for inquiries, services, and locations.",
-    url: "https://www.evanbarbers.co.uk/contact",
+    url: "https://evanbarbers.co.uk/contact",
     images: [{ url: "/evanbarbers/logo.webp" }],
     type: "website",
   },

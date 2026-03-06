@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const base = "https://www.evanbarbers.co.uk";
+  const base = "https://evanbarbers.co.uk";
 
   return [
     {

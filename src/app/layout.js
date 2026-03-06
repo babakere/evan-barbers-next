@@ -20,7 +20,7 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://www.evanbarbers.co.uk"),
+  metadataBase: new URL("https://evanbarbers.co.uk"),
   verification: {
     google: "mawZf_IrG13FzkERTYRN9ie0Qbu6b0jm1rbYJdSC01E",
   },
@@ -33,7 +33,7 @@ export const metadata = {
     title: "Evan Barbers | Your Trusted Grooming Destination",
     description:
       "Evan Barbers offers premium men's grooming services since 2009.",
-    url: "https://www.evanbarbers.co.uk",
+    url: "https://evanbarbers.co.uk",
     siteName: "Evan Barbers",
     images: [{ url: "/evanbarbers/logo.webp", width: 800, height: 800 }],
     type: "website",
@@ -56,12 +56,12 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "BarberShop",
-      "@id": "https://www.evanbarbers.co.uk/#granddrive",
+      "@id": "https://evanbarbers.co.uk/#granddrive",
       name: "Evan Barbers - Grand Drive",
       description: "Premium men's grooming services since 2009",
-      url: "https://www.evanbarbers.co.uk",
+      url: "https://evanbarbers.co.uk",
       telephone: "+447928186951",
-      image: "https://www.evanbarbers.co.uk/evanbarbers/logo.webp",
+      image: "https://evanbarbers.co.uk/evanbarbers/logo.webp",
       address: {
         "@type": "PostalAddress",
         streetAddress: "358 Grand Drive",
@@ -92,12 +92,12 @@ const jsonLd = {
     },
     {
       "@type": "BarberShop",
-      "@id": "https://www.evanbarbers.co.uk/#wimbledon",
+      "@id": "https://evanbarbers.co.uk/#wimbledon",
       name: "Evan Barbers - Wimbledon",
       description: "Premium men's grooming services since 2009",
-      url: "https://www.evanbarbers.co.uk",
+      url: "https://evanbarbers.co.uk",
       telephone: "+447928186951",
-      image: "https://www.evanbarbers.co.uk/evanbarbers/logo.webp",
+      image: "https://evanbarbers.co.uk/evanbarbers/logo.webp",
       address: {
         "@type": "PostalAddress",
         streetAddress: "95 The Broadway",

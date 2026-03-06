@@ -10,7 +10,7 @@ export const metadata = {
     title: "About Evan Barbers | Our Story Since 2009",
     description:
       "Learn about Evan Barbers, providing premium men's grooming since 2009.",
-    url: "https://www.evanbarbers.co.uk/about",
+    url: "https://evanbarbers.co.uk/about",
     images: [{ url: "/evanbarbers/logo.webp" }],
     type: "website",
   },
