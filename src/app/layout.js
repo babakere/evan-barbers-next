@@ -20,6 +20,9 @@ const bebasNeue = Bebas_Neue({
 
 export const metadata = {
   metadataBase: new URL("https://www.evanbarbers.co.uk"),
+  verification: {
+    google: "QE7iDrD1ACT558b7qNivL-wO75q2hFVuWosSgiUiM7E",
+  },
   title: "Evan Barbers | Your Trusted Grooming Destination",
   description:
     "Evan Barbers offers premium men's grooming services since 2009. Walk-ins welcome at our Grand Drive and Wimbledon locations in London.",
@@ -134,10 +137,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${montserrat.variable} ${bebasNeue.variable}`}
-    >
+    <html lang="en" className={`${montserrat.variable} ${bebasNeue.variable}`}>
       <head>
         <script
           type="application/ld+json"
