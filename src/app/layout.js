@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -154,6 +155,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <WhatsAppFloat />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
