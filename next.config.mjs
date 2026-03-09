@@ -37,7 +37,9 @@ const securityHeaders = [
     value: [
       "default-src 'self'",
       // Next.js requires unsafe-inline for its own hydration scripts + our JSON-LD
-      "script-src 'self' 'unsafe-inline'",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
+      // Allow AJAX requests to our own API routes and Google Analytics
+      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com",
       // CSS modules and styled-jsx use inline styles
       "style-src 'self' 'unsafe-inline'",
       // Images: self-hosted + data URIs for Next.js image optimisation
