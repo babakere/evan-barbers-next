@@ -9,6 +9,7 @@ export const metadata = {
   title: "Home | Evan Barbers - Finest Cuts Since 2009",
   description:
     "Welcome to Evan Barbers — premium men's grooming since 2009. Walk-ins welcome at our Grand Drive (SW20) and Wimbledon (SW19) locations.",
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Evan Barbers | Finest Cuts Since 2009",
     description:

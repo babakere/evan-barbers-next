@@ -6,6 +6,7 @@ export const metadata = {
   title: "About Us | Evan Barbers - Our Story Since 2009",
   description:
     "Learn about Evan Barbers, providing premium men's grooming since 2009. Discover our story, mission, and what makes us different.",
+  alternates: { canonical: "/about" },
   openGraph: {
     title: "About Evan Barbers | Our Story Since 2009",
     description:

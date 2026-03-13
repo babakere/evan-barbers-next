@@ -6,6 +6,7 @@ export const metadata = {
   title: "Contact Us | Evan Barbers - Get in Touch",
   description:
     "Contact Evan Barbers for inquiries about our services or general questions. Find our locations and opening hours.",
+  alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact Evan Barbers",
     description:
