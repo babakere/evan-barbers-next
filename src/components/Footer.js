@@ -29,7 +29,7 @@ export default function Footer() {
             >
               <Instagram size={18} />
             </a>
-            <a href="mailto:evanbabaker@hotmail.com" aria-label="Email">
+            <a href="mailto:eevanbarbers@gmail.com" aria-label="Email">
               <Mail size={18} />
             </a>
             <a
@@ -48,13 +48,21 @@ export default function Footer() {
           <h4>Grand Drive</h4>
           <p>
             <MapPin size={13} />
-            <a href={grandDrive.mapLink} target="_blank" rel="noopener noreferrer" className={styles.addressLink}>
+            <a
+              href={grandDrive.mapLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.addressLink}
+            >
               {grandDrive.address}
             </a>
           </p>
           <p>
             <Phone size={13} />
-            <a href={`tel:${grandDrive.phone.replace(/\s/g, "")}`} className={styles.addressLink}>
+            <a
+              href={`tel:${grandDrive.phone.replace(/\s/g, "")}`}
+              className={styles.addressLink}
+            >
               {grandDrive.phone}
             </a>
           </p>
@@ -73,13 +81,21 @@ export default function Footer() {
           <h4>Wimbledon</h4>
           <p>
             <MapPin size={13} />
-            <a href={wimbledon.mapLink} target="_blank" rel="noopener noreferrer" className={styles.addressLink}>
+            <a
+              href={wimbledon.mapLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.addressLink}
+            >
               {wimbledon.address}
             </a>
           </p>
           <p>
             <Phone size={13} />
-            <a href={`tel:${wimbledon.phone.replace(/\s/g, "")}`} className={styles.addressLink}>
+            <a
+              href={`tel:${wimbledon.phone.replace(/\s/g, "")}`}
+              className={styles.addressLink}
+            >
               {wimbledon.phone}
             </a>
           </p>
@@ -94,7 +110,9 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottom}>
-        <p>&copy; {new Date().getFullYear()} Evan Barbers. All rights reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} Evan Barbers. All rights reserved.
+        </p>
       </div>
     </footer>
   );
