@@ -1,19 +1,26 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Star, Gamepad2, Tv, Sofa } from "lucide-react";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "About Us | Evan Barbers - Our Story Since 2009",
+  title: "About Evan Barbers | Barbershops in South London Since 2009",
   description:
-    "Learn about Evan Barbers, providing premium men's grooming since 2009. Discover our story, mission, and what makes us different.",
+    "Learn about Evan Barbers — two barbershop locations in Wimbledon and Morden, South London. Serving the community with precision haircuts, skin fades and grooming since 2009.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Evan Barbers | Our Story Since 2009",
+    title: "About Evan Barbers | Barbershops in South London Since 2009",
     description:
-      "Learn about Evan Barbers, providing premium men's grooming since 2009.",
+      "Learn about Evan Barbers — two barbershop locations in Wimbledon and Morden, South London. Serving the community with precision haircuts, skin fades and grooming since 2009.",
     url: "https://evanbarbers.co.uk/about",
     images: [{ url: "/evanbarbers/logo.webp" }],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Evan Barbers | Barbershops in South London Since 2009",
+    description:
+      "Learn about Evan Barbers — two barbershop locations in Wimbledon and Morden, South London. Serving the community with precision haircuts, skin fades and grooming since 2009.",
   },
 };
 
@@ -43,17 +50,26 @@ const reviews = [
 export default function About() {
   return (
     <div className={styles.page}>
-      <h1 className={styles.pageTitle}>About Us</h1>
+      <h1 className={styles.pageTitle}>About Evan Barbers — South London Barbershops Since 2009</h1>
 
       {/* Our Story */}
       <section className={styles.section}>
         <div className={styles.textBlock}>
-          <h2>Our Story</h2>
+          <h2>Our Story — Barbering in Wimbledon &amp; Morden Since 2009</h2>
           <p>
-            Since 2009, Evan Barbers has been providing top-notch grooming
-            services, blending classic cuts with modern style. We pride
-            ourselves on creating a welcoming atmosphere and delivering
-            precision to every client.
+            Evan Barbers has been part of the South London barbering scene since
+            2009. What started as a single chair in Wimbledon has grown into two
+            well-established barbershops — one on The Broadway in Wimbledon
+            (SW19) and one on Grand Drive in Morden (SW20). Over the years we
+            have built a loyal client base across Merton, Raynes Park, Colliers
+            Wood and South Wimbledon, serving everyone from professionals heading
+            to work to kids getting their first proper haircut. We take pride in
+            delivering consistent, quality cuts in a relaxed, walk-in
+            environment — no appointments, no pretence, just good barbering.
+          </p>
+          <p>
+            <Link href="/services">Explore our full range of services and prices</Link>, or{" "}
+            <Link href="/contact">visit us at either of our two locations</Link> — no booking required.
           </p>
         </div>
         <Image
@@ -68,16 +84,20 @@ export default function About() {
       {/* Our Mission */}
       <section className={styles.sectionReverse}>
         <div className={styles.textBlock}>
-          <h2>Our Mission</h2>
+          <h2>Our Mission as Local Barbers</h2>
           <p>
-            Our mission is to redefine the barbering experience by combining
-            exceptional craftsmanship with outstanding customer service. At Evan
-            Barbers, every client leaves feeling confident and satisfied.
+            Our mission is simple: provide precision haircuts, clean skin fades,
+            sharp beard trims and traditional hot towel shaves at honest prices.
+            Every barber at Evan Barbers is trained to blend classic technique
+            with modern styles — whether you are after a textured crop, a zero
+            fade or a full grooming service. We believe a great barbershop is
+            about more than the cut — it is about the experience, the
+            conversation and leaving the chair feeling your best.
           </p>
         </div>
         <Image
-          src="/evanbarbers/amg.webp"
-          alt="Barber tools and a modern setting representing Evan Barbers' mission"
+          src="/evanbarbers/grand-drive-exterior.webp"
+          alt="Evan Barbers Grand Drive shopfront at 358 Grand Drive, Morden"
           width={800}
           height={600}
           className={styles.sectionImage}

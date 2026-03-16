@@ -1,19 +1,26 @@
+import Link from "next/link";
 import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
 import { locations } from "@/data/locations";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Contact Us | Evan Barbers - Get in Touch",
+  title: "Contact Evan Barbers | Walk-In Barbers Wimbledon & Morden",
   description:
-    "Contact Evan Barbers for inquiries about our services or general questions. Find our locations and opening hours.",
+    "Contact Evan Barbers or visit us at 95 The Broadway, Wimbledon (SW19) or 358 Grand Drive, Morden (SW20). Walk-ins welcome — no appointment needed.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Evan Barbers",
+    title: "Contact Evan Barbers | Walk-In Barbers Wimbledon & Morden",
     description:
-      "Reach out to Evan Barbers for inquiries, services, and locations.",
+      "Contact Evan Barbers or visit us at 95 The Broadway, Wimbledon (SW19) or 358 Grand Drive, Morden (SW20). Walk-ins welcome — no appointment needed.",
     url: "https://evanbarbers.co.uk/contact",
     images: [{ url: "/evanbarbers/logo.webp" }],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Evan Barbers | Walk-In Barbers Wimbledon & Morden",
+    description:
+      "Contact Evan Barbers or visit us at 95 The Broadway, Wimbledon (SW19) or 358 Grand Drive, Morden (SW20). Walk-ins welcome — no appointment needed.",
   },
 };
 
@@ -23,11 +30,11 @@ export default function Contact() {
 
   return (
     <div className={styles.page}>
-      <h1 className={styles.pageTitle}>Contact Us</h1>
+      <h1 className={styles.pageTitle}>Contact Evan Barbers — Walk-In Barbers in Wimbledon &amp; Morden</h1>
 
       {/* WhatsApp CTA */}
       <section className={styles.whatsappSection}>
-        <h2>Get in Touch</h2>
+        <h2>Get in Touch With Our Barbershops</h2>
         <p>Have a question? Message us directly on WhatsApp.</p>
         <a
           href="https://wa.me/447928186951?text=Hi%20Evan%20Barbers%2C%20I%20have%20a%20question"
@@ -45,6 +52,11 @@ export default function Contact() {
           </a>
         </div>
       </section>
+
+      <p className={styles.subtitle}>
+        Not sure what you need?{" "}
+        <Link href="/services">Check out our full service list and prices</Link>.
+      </p>
 
       {/* Location Cards */}
       <div className={styles.locationGrid}>

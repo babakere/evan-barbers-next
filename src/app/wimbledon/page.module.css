@@ -1,0 +1,127 @@
+.page {
+  margin-top: var(--navbar-height, 60px);
+  padding: 56px 24px;
+  background-color: var(--color-bg-light, #f9f9f9);
+}
+
+.pageTitle {
+  font-family: var(--font-bebas, "Bebas Neue"), "Montserrat", sans-serif;
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+.section {
+  max-width: 860px;
+  margin: 0 auto 48px;
+}
+
+.section h2 {
+  font-family: var(--font-bebas, "Bebas Neue"), "Montserrat", sans-serif;
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+
+.section p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.infoBox {
+  background: white;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 12px;
+}
+
+.infoBox p {
+  margin-bottom: 6px;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.infoBox a {
+  color: var(--color-red, #d32f2f);
+  font-weight: 600;
+}
+
+.serviceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.serviceItem:last-child {
+  border-bottom: none;
+}
+
+.servicePrice {
+  font-weight: 700;
+  color: var(--color-red, #d32f2f);
+  white-space: nowrap;
+  margin-left: 16px;
+}
+
+.linkList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: var(--color-red, #d32f2f);
+  color: white;
+  padding: 11px 28px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.ctaButton:hover {
+  background-color: var(--color-red-dark, #b71c1c);
+  transform: translateY(-1px);
+}
+
+.ctaSecondary {
+  display: inline-block;
+  border: 2px solid var(--color-red, #d32f2f);
+  color: var(--color-red, #d32f2f);
+  padding: 11px 28px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.ctaSecondary:hover {
+  background-color: var(--color-red, #d32f2f);
+  color: white;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 40px 16px;
+  }
+}

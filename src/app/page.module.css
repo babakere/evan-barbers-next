@@ -185,8 +185,32 @@
   gap: 48px;
 }
 
+/* Three-column about layout */
+.aboutThreeCol {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.aboutImgWrap {
+  position: relative;
+  height: 360px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  filter: brightness(92%);
+}
+
+.aboutImgFill {
+  object-fit: cover;
+}
+
 .aboutText {
   flex: 1;
+  text-align: center;
 }
 
 .aboutText h2 {
@@ -473,6 +497,15 @@
 
   .aboutImage {
     order: -1;
+  }
+
+  .aboutThreeCol {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .aboutImgWrap {
+    height: 260px;
   }
 
   .galleryGrid {

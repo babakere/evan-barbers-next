@@ -6,17 +6,22 @@ import styles from "./page.module.css";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = {
-  title: "Home | Evan Barbers - Finest Cuts Since 2009",
+  title: "Barbers in Wimbledon & Morden | Evan Barbers — Since 2009",
   description:
-    "Welcome to Evan Barbers — premium men's grooming since 2009. Walk-ins welcome at our Grand Drive (SW20) and Wimbledon (SW19) locations.",
-  alternates: { canonical: "/" },
+    "Walk-in barbers in Wimbledon (SW19) and Morden (SW20). Skin fades, haircuts, hot towel shaves and beard trims at Evan Barbers. No appointment needed. Open 7 days.",
   openGraph: {
-    title: "Evan Barbers | Finest Cuts Since 2009",
+    title: "Barbers in Wimbledon & Morden | Evan Barbers — Since 2009",
     description:
-      "Experience top-notch grooming services and stylish haircuts at Evan Barbers.",
+      "Walk-in barbers in Wimbledon (SW19) and Morden (SW20). Skin fades, haircuts, hot towel shaves and beard trims at Evan Barbers. No appointment needed. Open 7 days.",
     url: "https://evanbarbers.co.uk/",
     images: [{ url: "/evanbarbers/logo.webp" }],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Barbers in Wimbledon & Morden | Evan Barbers — Since 2009",
+    description:
+      "Walk-in barbers in Wimbledon (SW19) and Morden (SW20). Skin fades, haircuts, hot towel shaves and beard trims at Evan Barbers. No appointment needed. Open 7 days.",
   },
 };
 
@@ -47,7 +52,7 @@ export default function Home() {
         />
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Welcome to Evan Barbers</h1>
+          <h1 className={styles.heroTitle}>Barbers in Wimbledon &amp; Morden — Precision Cuts Since 2009</h1>
           <p className={styles.heroSubtitle}>
             Experience the Finest Cuts Since 2009
           </p>
@@ -70,7 +75,7 @@ export default function Home() {
 
           {/* Locations Box */}
           <div className={styles.locationsBox}>
-            <h2 className={styles.locationsTitle}>Our Locations</h2>
+            <h2 className={styles.locationsTitle}>Our Barbershop Locations</h2>
             <div className={styles.locationsGrid}>
               {/* Grand Drive */}
               <div className={styles.locationCard}>
@@ -113,26 +118,35 @@ export default function Home() {
 
       {/* About Preview Section */}
       <section className={styles.aboutSection}>
-        <div className={styles.aboutContent}>
+        <div className={styles.aboutThreeCol}>
+          <div className={styles.aboutImgWrap}>
+            <Image
+              src="/evanbarbers/Evan_interior.webp"
+              alt="The interior of Evan Barbers"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className={styles.aboutImgFill}
+            />
+          </div>
           <div className={styles.aboutText}>
-            <h2>More Than Just a Haircut</h2>
+            <h2>More Than Just a Haircut — Premium Grooming in South London</h2>
             <p>
-              Since 2009, Evan Barbers has been providing top-notch grooming
-              services, blending classic cuts with modern style. We pride
-              ourselves on creating a welcoming atmosphere and delivering
-              precision to every client.
+              With two barbershops in Wimbledon and Morden, Evan Barbers has
+              been delivering precision cuts and premium grooming across South
+              London since 2009. Walk in any day of the week — no appointment
+              needed.
             </p>
             <Link href="/about" className={styles.ctaButton}>
               Learn More About Us
             </Link>
           </div>
-          <div className={styles.aboutImage}>
+          <div className={styles.aboutImgWrap}>
             <Image
-              src="/evanbarbers/Evan_interior.webp"
-              alt="The interior of Evan Barbers"
-              width={800}
-              height={600}
-              className={styles.roundedImage}
+              src="/evanbarbers/grand-drive-interior.webp"
+              alt="Inside Evan Barbers Grand Drive — barber chairs and modern interior"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className={styles.aboutImgFill}
             />
           </div>
         </div>
@@ -140,7 +154,7 @@ export default function Home() {
 
       {/* Gallery Section */}
       <section className={styles.gallerySection}>
-        <h2>Our Work</h2>
+        <h2>Our Haircut Gallery</h2>
         <p className={styles.gallerySubtitle}>
           Precision cuts and styles crafted for every client
         </p>
@@ -166,7 +180,7 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section className={styles.testimonials}>
-        <h2>What Our Clients Say</h2>
+        <h2>What Our Clients Say About Evan Barbers</h2>
         <div className={styles.testimonialGrid}>
           {[
             {
@@ -195,7 +209,7 @@ export default function Home() {
 
       {/* Find Us Section */}
       <section className={styles.findUsSection}>
-        <h2>Find Us</h2>
+        <h2>Find Our Barbershops</h2>
         <p className={styles.findUsSubtitle}>Walk-ins welcome — no appointment needed</p>
         <div className={styles.findUsGrid}>
           {[grandDrive, wimbledon].map((loc) => (

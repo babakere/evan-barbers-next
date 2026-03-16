@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { CheckCircle, Scissors } from "lucide-react";
 import { isBranchOpen, getNextOpenTime } from "@/utils/branchStatus";
 import styles from "./page.module.css";
@@ -164,7 +165,7 @@ function ServiceList({ services }) {
 export default function Services() {
   return (
     <div className={styles.page}>
-      <h1 className={styles.pageTitle}>Our Services</h1>
+      <h1 className={styles.pageTitle}>Haircuts, Fades &amp; Grooming — Prices for Grand Drive &amp; Wimbledon</h1>
       <p className={styles.subtitle}>
         No appointments necessary! Walk-ins welcome at both branches.
       </p>
@@ -185,6 +186,10 @@ export default function Services() {
 
       <p className={styles.tagline}>
         "Your trusted grooming destination since 2009."
+      </p>
+      <p className={styles.subtitle}>
+        Have a question about our services?{" "}
+        <Link href="/contact">Get in touch</Link> or just walk in — no appointment needed.
       </p>
     </div>
   );

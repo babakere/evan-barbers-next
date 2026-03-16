@@ -14,7 +14,13 @@
   margin-bottom: 36px;
   letter-spacing: 0.5px;
 }
-
+.subtitle {
+  max-width: 720px; /* same width as contact section */
+  margin: 0 auto 32px; /* center it under the box */
+  text-align: center; /* optional but looks cleaner */
+  font-size: 0.95rem;
+  color: #444;
+}
 /* WhatsApp */
 .whatsappSection {
   text-align: center;
@@ -50,7 +56,9 @@
   border-radius: 25px;
   font-weight: 700;
   font-size: 1rem;
-  transition: background-color 0.2s, transform 0.2s;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 }
 

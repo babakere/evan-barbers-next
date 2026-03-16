@@ -27,15 +27,13 @@ export const metadata = {
   verification: {
     google: "mawZf_IrG13FzkERTYRN9ie0Qbu6b0jm1rbYJdSC01E",
   },
-  title: "Evan Barbers | Your Trusted Grooming Destination",
+  title: "Barbers in Wimbledon & Morden | Evan Barbers — Since 2009",
   description:
-    "Evan Barbers offers premium men's grooming services since 2009. Walk-ins welcome at our Grand Drive and Wimbledon locations in London.",
-  keywords:
-    "Barbers, Grooming, Haircuts, London Barbers, Men's Grooming, Morden Barbers, Wimbledon Barbers, SW20, SW19",
+    "Walk-in barbers in Wimbledon (SW19) and Morden (SW20). Skin fades, haircuts, hot towel shaves and beard trims at Evan Barbers. No appointment needed. Open 7 days.",
   openGraph: {
-    title: "Evan Barbers | Your Trusted Grooming Destination",
+    title: "Barbers in Wimbledon & Morden | Evan Barbers — Since 2009",
     description:
-      "Evan Barbers offers premium men's grooming services since 2009.",
+      "Walk-in barbers in Wimbledon (SW19) and Morden (SW20). Skin fades, haircuts, hot towel shaves and beard trims at Evan Barbers. No appointment needed. Open 7 days.",
     url: "https://evanbarbers.co.uk",
     siteName: "Evan Barbers",
     images: [{ url: "/evanbarbers/logo.webp", width: 800, height: 800 }],
@@ -44,8 +42,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Evan Barbers | Your Trusted Grooming Destination",
-    description: "Premium men's grooming services since 2009 in London.",
+    title: "Barbers in Wimbledon & Morden | Evan Barbers — Since 2009",
+    description:
+      "Walk-in barbers in Wimbledon (SW19) and Morden (SW20). Skin fades, haircuts, hot towel shaves and beard trims at Evan Barbers. No appointment needed. Open 7 days.",
     images: ["/evanbarbers/logo.webp"],
   },
   robots: {
@@ -62,9 +61,9 @@ const jsonLd = {
       "@id": "https://evanbarbers.co.uk/#granddrive",
       name: "Evan Barbers - Grand Drive",
       description: "Premium men's grooming services since 2009",
-      url: "https://evanbarbers.co.uk",
+      url: "https://evanbarbers.co.uk/grand-drive",
       telephone: "+447928186951",
-      image: "https://evanbarbers.co.uk/evanbarbers/logo.webp",
+      image: "https://evanbarbers.co.uk/evanbarbers/grand-drive-exterior.webp",
       address: {
         "@type": "PostalAddress",
         streetAddress: "358 Grand Drive",
@@ -92,13 +91,26 @@ const jsonLd = {
         latitude: 51.392,
         longitude: -0.225,
       },
+      sameAs: [
+        "https://maps.google.com/?q=Evan+Barbers,+358+Grand+Drive,+SW20+9NQ,+London",
+        "https://www.facebook.com/Evanbarbers/",
+        "https://www.instagram.com/evanbarbers/",
+      ],
+      hasMap:
+        "https://maps.google.com/?q=Evan+Barbers,+358+Grand+Drive,+SW20+9NQ,+London",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5",
+        reviewCount: "4",
+        bestRating: "5",
+      },
     },
     {
       "@type": "BarberShop",
       "@id": "https://evanbarbers.co.uk/#wimbledon",
       name: "Evan Barbers - Wimbledon",
       description: "Premium men's grooming services since 2009",
-      url: "https://evanbarbers.co.uk",
+      url: "https://evanbarbers.co.uk/wimbledon",
       telephone: "+447928186951",
       image: "https://evanbarbers.co.uk/evanbarbers/logo.webp",
       address: {
@@ -134,6 +146,30 @@ const jsonLd = {
         "@type": "GeoCoordinates",
         latitude: 51.4194,
         longitude: -0.2041,
+      },
+      sameAs: [
+        "https://maps.google.com/?q=Evan+Barbers,+95+The+Broadway,+SW19+1QG,+London",
+        "https://www.facebook.com/Evanbarbers/",
+        "https://www.instagram.com/evanbarbers/",
+      ],
+      hasMap:
+        "https://maps.google.com/?q=Evan+Barbers,+95+The+Broadway,+SW19+1QG,+London",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5",
+        reviewCount: "4",
+        bestRating: "5",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://evanbarbers.co.uk/#website",
+      url: "https://evanbarbers.co.uk",
+      name: "Evan Barbers",
+      description:
+        "Walk-in barbers in Wimbledon and Morden, South London. Skin fades, haircuts, hot towel shaves and beard trims since 2009.",
+      publisher: {
+        "@id": "https://evanbarbers.co.uk/#granddrive",
       },
     },
   ],
