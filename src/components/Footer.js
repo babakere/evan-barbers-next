@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Clock, Instagram, Mail } from "lucide-react";
+import { MapPin, Phone, Clock, Instagram, Mail, Star } from "lucide-react";
 import { locations } from "@/data/locations";
 import styles from "./Footer.module.css";
 
@@ -22,7 +22,7 @@ export default function Footer() {
           </nav>
           <div className={styles.socials}>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/evanbarbers/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -39,6 +39,24 @@ export default function Footer() {
               aria-label="WhatsApp"
             >
               <Phone size={18} />
+            </a>
+          </div>
+          <div className={styles.reviewLinks}>
+            <a
+              href="https://g.page/r/CXPtG2sEltzFEAE/review"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Star size={13} />
+              Review Grand Drive
+            </a>
+            <a
+              href="https://g.page/r/CZsPxzFwyY4XEAE/review"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Star size={13} />
+              Review Wimbledon
             </a>
           </div>
         </div>

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Clock, Navigation } from "lucide-react";
+import { MapPin, Clock, Navigation, Star } from "lucide-react";
 import { locations } from "@/data/locations";
+import { reviews } from "@/data/reviews";
 import styles from "./page.module.css";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -43,7 +44,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <Image
-          src="/evanbarbers/supra.webp"
+          src="/evanbarbers/grand-drive-exterior.webp"
           alt=""
           fill
           priority
@@ -52,7 +53,9 @@ export default function Home() {
         />
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Barbers in Wimbledon &amp; Morden — Precision Cuts Since 2009</h1>
+          <h1 className={styles.heroTitle}>
+            Barbers in Wimbledon &amp; Morden — Precision Cuts Since 2009
+          </h1>
           <p className={styles.heroSubtitle}>
             Experience the Finest Cuts Since 2009
           </p>
@@ -178,39 +181,63 @@ export default function Home() {
         </Link>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Reviews Section */}
       <section className={styles.testimonials}>
-        <h2>What Our Clients Say About Evan Barbers</h2>
+        <div className={styles.reviewsHeader}>
+          <h2>What Our Clients Say About Evan Barbers</h2>
+          <p className={styles.reviewsRating}>
+            4.8 <Star size={18} fill="#f5c518" stroke="#f5c518" /> from 175+
+            Google reviews
+          </p>
+        </div>
         <div className={styles.testimonialGrid}>
-          {[
-            {
-              name: "John D.",
-              text: "Great atmosphere and skilled barbers. I always leave looking sharp!",
-            },
-            {
-              name: "Mark T.",
-              text: "Evan Barbers never disappoints. The perfect blend of classic and modern styles.",
-            },
-            {
-              name: "Alex R.",
-              text: "Friendly staff and top-notch service. Highly recommended!",
-            },
-          ].map((t, i) => (
-            <ScrollReveal key={i} delay={i * 150}>
+          {reviews.map((t, i) => (
+            <ScrollReveal key={i} delay={i * 100}>
               <div className={styles.testimonialCard}>
-                <p className={styles.testimonialQuote}>&ldquo;</p>
+                <div className={styles.starRow}>
+                  {Array.from({ length: t.rating }).map((_, s) => (
+                    <Star
+                      key={s}
+                      size={14}
+                      fill="#f5c518"
+                      stroke="#f5c518"
+                    />
+                  ))}
+                </div>
                 <p className={styles.testimonialText}>{t.text}</p>
                 <p className={styles.testimonialName}>— {t.name}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
+        <div className={styles.reviewCtas}>
+          <a
+            href="https://g.page/r/CXPtG2sEltzFEAE/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.reviewBtn}
+          >
+            <Star size={15} />
+            Leave a Google Review — Grand Drive
+          </a>
+          <a
+            href="https://g.page/r/CZsPxzFwyY4XEAE/review"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.reviewBtn}
+          >
+            <Star size={15} />
+            Leave a Google Review — Wimbledon
+          </a>
+        </div>
       </section>
 
       {/* Find Us Section */}
       <section className={styles.findUsSection}>
         <h2>Find Our Barbershops</h2>
-        <p className={styles.findUsSubtitle}>Walk-ins welcome — no appointment needed</p>
+        <p className={styles.findUsSubtitle}>
+          Walk-ins welcome — no appointment needed
+        </p>
         <div className={styles.findUsGrid}>
           {[grandDrive, wimbledon].map((loc) => (
             <div key={loc.name} className={styles.findUsCard}>
@@ -227,7 +254,9 @@ export default function Home() {
               <div className={styles.findUsHours}>
                 <Clock size={15} />
                 <div>
-                  {loc.hours.display.closed && <p>{loc.hours.display.closed}</p>}
+                  {loc.hours.display.closed && (
+                    <p>{loc.hours.display.closed}</p>
+                  )}
                   <p>{loc.hours.display.weekday}</p>
                   <p>{loc.hours.display.sunday}</p>
                 </div>

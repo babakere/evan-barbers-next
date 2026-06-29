@@ -120,6 +120,25 @@
   font-size: 0.78rem;
 }
 
+.reviewLinks {
+  display: flex;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.reviewLinks a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #aaa;
+  font-size: 0.78rem;
+  transition: color 0.2s;
+}
+
+.reviewLinks a:hover {
+  color: #f5c518;
+}
+
 .bottom {
   margin-top: 28px;
   padding: 14px 0;
@@ -176,6 +195,10 @@
   .socials {
     justify-content: center;
     gap: 18px;
+  }
+
+  .reviewLinks {
+    justify-content: center;
   }
 
   .bottom {
