@@ -6,6 +6,7 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { locations } from "@/data/locations";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -98,11 +99,14 @@ const jsonLd = {
       ],
       hasMap:
         "https://maps.google.com/?q=Evan+Barbers,+358+Grand+Drive,+SW20+9NQ,+London",
+      // Rating figures sourced from src/data/locations.js (manually maintained —
+      // refresh periodically from this branch's Google Business Profile).
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "5",
-        reviewCount: "4",
+        ratingValue: String(locations.grandDrive.rating.value),
+        reviewCount: String(locations.grandDrive.rating.count),
         bestRating: "5",
+        worstRating: "1",
       },
     },
     {
@@ -154,11 +158,14 @@ const jsonLd = {
       ],
       hasMap:
         "https://maps.google.com/?q=Evan+Barbers,+95+The+Broadway,+SW19+1QG,+London",
+      // Rating figures sourced from src/data/locations.js (manually maintained —
+      // refresh periodically from this branch's Google Business Profile).
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "5",
-        reviewCount: "4",
+        ratingValue: String(locations.wimbledon.rating.value),
+        reviewCount: String(locations.wimbledon.rating.count),
         bestRating: "5",
+        worstRating: "1",
       },
     },
     {

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { locations } from "@/data/locations";
+import RatingBadge from "@/components/RatingBadge";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -48,6 +49,13 @@ export default function GrandDrivePage() {
       <h1 className={styles.pageTitle}>
         Barbers in Morden — 358 Grand Drive, SW20
       </h1>
+
+      <div className={styles.ratingWrap}>
+        <RatingBadge
+          value={grandDrive.rating.value}
+          count={grandDrive.rating.count}
+        />
+      </div>
 
       <div className={styles.heroBanner}>
         <Image

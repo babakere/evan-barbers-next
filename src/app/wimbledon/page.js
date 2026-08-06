@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { locations } from "@/data/locations";
+import RatingBadge from "@/components/RatingBadge";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -43,6 +44,13 @@ export default function WimbledonPage() {
       <h1 className={styles.pageTitle}>
         Barbers in Wimbledon — 95 The Broadway, SW19
       </h1>
+
+      <div className={styles.ratingWrap}>
+        <RatingBadge
+          value={wimbledon.rating.value}
+          count={wimbledon.rating.count}
+        />
+      </div>
 
       {/* About this branch */}
       <section className={styles.section}>

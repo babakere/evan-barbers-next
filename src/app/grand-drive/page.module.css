@@ -163,3 +163,9 @@
     padding: 40px 16px;
   }
 }
+
+.ratingWrap {
+  display: flex;
+  justify-content: center;
+  margin: -20px 0 40px;
+}

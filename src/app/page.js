@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Clock, Navigation, Star } from "lucide-react";
-import { locations } from "@/data/locations";
+import { locations, combinedRating } from "@/data/locations";
 import { reviews } from "@/data/reviews";
 import styles from "./page.module.css";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -186,8 +186,9 @@ export default function Home() {
         <div className={styles.reviewsHeader}>
           <h2>What Our Clients Say About Evan Barbers</h2>
           <p className={styles.reviewsRating}>
-            4.8 <Star size={18} fill="#f5c518" stroke="#f5c518" /> from 175+
-            Google reviews
+            {combinedRating.value.toFixed(1)}{" "}
+            <Star size={18} fill="#f5c518" stroke="#f5c518" /> from{" "}
+            {combinedRating.count} Google reviews
           </p>
         </div>
         <div className={styles.testimonialGrid}>

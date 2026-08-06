@@ -1,6 +1,13 @@
+// Google review ratings shown on-site (visible star badges) and in the
+// JSON-LD structured data in src/app/layout.js.
+// IMPORTANT: these figures are maintained MANUALLY. They are not pulled from
+// any API — refresh them periodically from each shop's Google Business Profile,
+// as the ratings and review counts drift over time. Keep this file as the
+// single source of truth so the visible UI and structured data never disagree.
 export const locations = {
   grandDrive: {
     name: "Grand Drive",
+    rating: { value: 4.9, count: 327 },
     address: "358 Grand Drive, SW20 9NQ, London",
     phone: "+44 7928 186951",
     mapLink:
@@ -20,6 +27,7 @@ export const locations = {
   },
   wimbledon: {
     name: "Wimbledon",
+    rating: { value: 4.6, count: 188 },
     address: "95 The Broadway, SW19 1QG, London",
     phone: "+44 7928 186951",
     mapLink:
@@ -38,6 +46,11 @@ export const locations = {
     },
   },
 };
+
+// Combined rating across both branches, shown on the homepage.
+// Maintained manually — see the note above; refresh from Google alongside the
+// per-branch figures (currently the weighted blend of Grand Drive + Wimbledon).
+export const combinedRating = { value: 4.8, count: 515 };
 
 export const specialClosures = [
   new Date(new Date().getFullYear(), 11, 25).toDateString(),
