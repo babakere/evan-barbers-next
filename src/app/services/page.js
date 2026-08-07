@@ -72,48 +72,54 @@ const grandDriveServices = [
 const wimbledonServices = [
   {
     name: "Haircut",
-    price: "£17",
+    price: "£18",
     description: "A classic haircut tailored to your style.",
   },
   {
-    name: "Scissor Cut",
-    price: "£17",
-    description: "A precision scissor cut for a refined look.",
-  },
-  {
     name: "Skin Fade",
-    price: "£19",
+    price: "£20",
     description: "Sharp and modern skin fade style.",
   },
   {
-    name: "Wet Shave",
-    price: "£15",
-    description: "Traditional shave with a hot towel finish.",
-  },
-  {
     name: "Beard Trim Only",
-    price: "£7",
+    price: "£8",
     description: "Quick and precise beard trim.",
   },
   {
     name: "Beard Trim & Shape Up",
-    price: "£9",
+    price: "£10",
     description: "Detailed beard trim with shaping.",
   },
   {
+    name: "Hair Cut & Beard Trim",
+    price: "£27",
+    description: "Detailed Haircut & beard trim with shaping.",
+  },
+  {
+    name: "Skin Fade & Beard Trim",
+    price: "£29",
+    description: "Skin fade haircut with a detailed beard trim.",
+  },
+
+  {
     name: "O.A.P (Mon–Thu)",
-    price: "£13",
+    price: "£14",
     description: "Special haircut for seniors.",
   },
   {
     name: "Kids (Under 12, Mon–Thu)",
-    price: "£14",
+    price: "£15",
     description: "A tailored haircut for children under 12.",
   },
   {
     name: "Crew Cut (No 1–4, Mon–Thu)",
-    price: "£14",
+    price: "£15",
     description: "Classic crew cut with length options.",
+  },
+  {
+    name: "Nose Wax",
+    price: "£4",
+    description: "Painless nose hair wax.",
   },
 ];
 
@@ -165,7 +171,9 @@ function ServiceList({ services }) {
 export default function Services() {
   return (
     <div className={styles.page}>
-      <h1 className={styles.pageTitle}>Haircuts, Fades &amp; Grooming — Prices for Grand Drive &amp; Wimbledon</h1>
+      <h1 className={styles.pageTitle}>
+        Haircuts, Fades &amp; Grooming — Prices for Grand Drive &amp; Wimbledon
+      </h1>
       <p className={styles.subtitle}>
         No appointments necessary! Walk-ins welcome at both branches.
       </p>
@@ -189,7 +197,8 @@ export default function Services() {
       </p>
       <p className={styles.subtitle}>
         Have a question about our services?{" "}
-        <Link href="/contact">Get in touch</Link> or just walk in — no appointment needed.
+        <Link href="/contact">Get in touch</Link> or just walk in — no
+        appointment needed.
       </p>
     </div>
   );
