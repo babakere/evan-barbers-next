@@ -25,22 +25,6 @@ export const metadata = {
   },
 };
 
-const grandDriveServices = [
-  { name: "Haircut", price: "£16" },
-  { name: "Wash Cut & Blow Dry", price: "£20" },
-  { name: "Hot Towel Shave", price: "£15" },
-  { name: "Head Shave", price: "£15" },
-  { name: "Boys Under 12 (Tue–Thu)", price: "£13" },
-  { name: "O.A.P.'s (Tue–Thu, 65 & Over)", price: "£12" },
-  { name: "Crew Cut (Tue–Thu)", price: "£13" },
-  { name: "Skinfade", price: "£19" },
-  { name: "Beard Trim Only", price: "£7" },
-  { name: "Beard Trim & Shape Up", price: "£9" },
-  { name: "Ear Wax", price: "£4" },
-  { name: "Nose Wax", price: "£4" },
-  { name: "Face Mask", price: "£5" },
-];
-
 export default function GrandDrivePage() {
   const grandDrive = locations.grandDrive;
 
@@ -105,7 +89,7 @@ export default function GrandDrivePage() {
       <section className={styles.section}>
         <h2>Services &amp; Prices at Grand Drive</h2>
         <div className={styles.infoBox}>
-          {grandDriveServices.map((service, index) => (
+          {grandDrive.services.map((service, index) => (
             <div key={index} className={styles.serviceItem}>
               <span>{service.name}</span>
               <span className={styles.servicePrice}>{service.price}</span>

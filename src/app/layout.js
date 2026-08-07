@@ -68,17 +68,13 @@ const jsonLd = {
       image: "https://evanbarbers.co.uk/evanbarbers/grand-drive-exterior.webp",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "358 Grand Drive",
-        postalCode: "SW20 9NQ",
-        addressLocality: "London",
-        addressCountry: "GB",
+        ...locations.grandDrive.postalAddress,
       },
       openingHoursSpecification: getOpeningHoursSpecification("grandDrive"),
       priceRange: "£",
       geo: {
         "@type": "GeoCoordinates",
-        latitude: 51.392,
-        longitude: -0.225,
+        ...locations.grandDrive.geo,
       },
       sameAs: [
         "https://maps.google.com/?q=Evan+Barbers,+358+Grand+Drive,+SW20+9NQ,+London",
@@ -107,17 +103,13 @@ const jsonLd = {
       image: "https://evanbarbers.co.uk/evanbarbers/logo.webp",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "95 The Broadway",
-        postalCode: "SW19 1QG",
-        addressLocality: "London",
-        addressCountry: "GB",
+        ...locations.wimbledon.postalAddress,
       },
       openingHoursSpecification: getOpeningHoursSpecification("wimbledon"),
       priceRange: "£",
       geo: {
         "@type": "GeoCoordinates",
-        latitude: 51.4194,
-        longitude: -0.2041,
+        ...locations.wimbledon.geo,
       },
       sameAs: [
         "https://maps.google.com/?q=Evan+Barbers,+95+The+Broadway,+SW19+1QG,+London",

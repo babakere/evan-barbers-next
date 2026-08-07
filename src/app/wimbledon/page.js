@@ -24,18 +24,6 @@ export const metadata = {
   },
 };
 
-const wimbledonServices = [
-  { name: "Haircut", price: "£17" },
-  { name: "Scissor Cut", price: "£17" },
-  { name: "Skin Fade", price: "£19" },
-  { name: "Wet Shave", price: "£15" },
-  { name: "Beard Trim Only", price: "£7" },
-  { name: "Beard Trim & Shape Up", price: "£9" },
-  { name: "O.A.P (Mon–Thu)", price: "£13" },
-  { name: "Kids (Under 12, Mon–Thu)", price: "£14" },
-  { name: "Crew Cut (No 1–4, Mon–Thu)", price: "£14" },
-];
-
 export default function WimbledonPage() {
   const wimbledon = locations.wimbledon;
 
@@ -88,7 +76,7 @@ export default function WimbledonPage() {
       <section className={styles.section}>
         <h2>Services &amp; Prices at Wimbledon</h2>
         <div className={styles.infoBox}>
-          {wimbledonServices.map((service, index) => (
+          {wimbledon.services.map((service, index) => (
             <div key={index} className={styles.serviceItem}>
               <span>{service.name}</span>
               <span className={styles.servicePrice}>{service.price}</span>
