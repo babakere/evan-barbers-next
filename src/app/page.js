@@ -169,7 +169,7 @@ export default function Home() {
                   src={img.src}
                   alt={img.alt}
                   fill
-                  sizes="(max-width: 480px) 50vw, (max-width: 768px) 33vw, 25vw"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1008px) 31vw, 312px"
                   className={styles.galleryImg}
                 />
               </div>

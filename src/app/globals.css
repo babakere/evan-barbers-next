@@ -63,3 +63,20 @@ img {
 .skip-link:focus {
   top: 0;
 }
+
+/* Respect users who ask for reduced motion: disable smooth scrolling and
+   neutralise animations/transitions site-wide (gallery reveals, hovers, etc.) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

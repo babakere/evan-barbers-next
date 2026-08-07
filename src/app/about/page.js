@@ -134,7 +134,7 @@ export default function About() {
         <div className={styles.reviewGrid}>
           {reviews.map((review, index) => (
             <div key={index} className={styles.reviewCard}>
-              <p className={styles.reviewText}>"{review.text}"</p>
+              <p className={styles.reviewText}>&ldquo;{review.text}&rdquo;</p>
               <p className={styles.reviewName}>- {review.name}</p>
               <div className={styles.stars}>
                 {Array.from({ length: review.rating }).map((_, i) => (

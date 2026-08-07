@@ -185,7 +185,7 @@ export default function Services() {
       </div>
 
       <p className={styles.tagline}>
-        "Your trusted grooming destination since 2009."
+        &ldquo;Your trusted grooming destination since 2009.&rdquo;
       </p>
       <p className={styles.subtitle}>
         Have a question about our services?{" "}

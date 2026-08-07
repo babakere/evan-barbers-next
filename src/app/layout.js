@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { locations } from "@/data/locations";
+import { getOpeningHoursSpecification } from "@/utils/openingHours";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -72,20 +73,7 @@ const jsonLd = {
         addressLocality: "London",
         addressCountry: "GB",
       },
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          opens: "09:00",
-          closes: "19:00",
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: "Sunday",
-          opens: "10:00",
-          closes: "17:00",
-        },
-      ],
+      openingHoursSpecification: getOpeningHoursSpecification("grandDrive"),
       priceRange: "£",
       geo: {
         "@type": "GeoCoordinates",
@@ -124,27 +112,7 @@ const jsonLd = {
         addressLocality: "London",
         addressCountry: "GB",
       },
-      openingHoursSpecification: [
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-          ],
-          opens: "09:00",
-          closes: "19:00",
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: "Sunday",
-          opens: "10:00",
-          closes: "17:00",
-        },
-      ],
+      openingHoursSpecification: getOpeningHoursSpecification("wimbledon"),
       priceRange: "£",
       geo: {
         "@type": "GeoCoordinates",

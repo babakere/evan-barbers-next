@@ -1,13 +1,14 @@
+import { afterEach, describe, expect, test, vi } from "vitest";
 import { isBranchOpen, getNextOpenTime } from "./branchStatus";
 
 // Helper to set a fake date/time
 const setMockDate = (dateString) => {
-  jest.useFakeTimers();
-  jest.setSystemTime(new Date(dateString));
+  vi.useFakeTimers();
+  vi.setSystemTime(new Date(dateString));
 };
 
 afterEach(() => {
-  jest.useRealTimers();
+  vi.useRealTimers();
 });
 
 describe("isBranchOpen", () => {
